@@ -26,15 +26,17 @@
 
       <div class="row d-flex justify-content-center my-4 rounded border-0 mr-3">
         <input
+          id="searchInput"
           class="form-control col-2 border-0 border-primary input--line"
-          type="text"
+          type="number"
           class="form-control"
           placeholder="Enter the price "
           aria-label="Dollar amount (with dot and two decimal places)"
         />
 
         <button
-          class="search--button col-1 rounded border-0 bg-primary text-light ml-3"
+          onclick="showPopup()"
+          class="search--button rounded border-0 bg-primary text-light ml-3"
         >
           Search
         </button>
@@ -42,11 +44,18 @@
 
       <div class="row">
         <div class="col-3 card border-0">
-          <img
-            src="./imgs/mustang1969.jpg"
-            alt="Ford Mustang 1969"
-            class="w-100 h-75"
-          />
+          <div
+            id="item1"
+            onclick="displayDescription('item1')"
+            class="card__image-holder w-100 h-75"
+          >
+            <img
+              src="./imgs/mustang1969.jpg"
+              alt="Ford Mustang 1969"
+              class="card__image"
+            />
+          </div>
+
           <button
             class="w-100 text-light bg-primary rounded border-0 card__button"
           >
@@ -55,11 +64,18 @@
         </div>
 
         <div class="col-3 card border-0">
-          <img
-            src="./imgs/highlander.jpg"
-            alt="Toyota Highlander"
-            class="w-100 h-75"
-          />
+          <div
+            id="item2"
+            onclick="displayDescription('item2')"
+            class="card__image-holder w-100 h-75"
+          >
+            <img
+              src="./imgs/highlander.jpg"
+              alt="Toyota Highlander"
+              class="card__image"
+            />
+          </div>
+
           <button
             class="w-100 text-light bg-primary rounded border-0 card__button"
           >
@@ -68,11 +84,18 @@
         </div>
 
         <div class="col-3 card border-0">
-          <img
-            src="./imgs/cls350.jpg"
-            alt="Mercedes-Benz CLS 350"
-            class="w-100 h-75"
-          />
+          <div
+            id="item3"
+            onclick="displayDescription('item3')"
+            class="card__image-holder w-100 h-75"
+          >
+            <img
+              src="./imgs/cls350.jpg"
+              alt="Mercedes-Benz CLS 350"
+              class="card__image"
+            />
+          </div>
+
           <button
             class="w-100 text-light bg-primary rounded border-0 card__button"
           >
@@ -81,7 +104,18 @@
         </div>
 
         <div class="col-3 card border-0">
-          <img src="./imgs/cooper.jpg" alt="Mini Cooper" class="w-100 h-75" />
+          <div
+            id="item4"
+            onclick="displayDescription('item4')"
+            class="card__image-holder w-100 h-75"
+          >
+            <img
+              src="./imgs/cooper.jpg"
+              alt="Mini Cooper"
+              class="card__image"
+            />
+          </div>
+
           <button
             class="w-100 text-light bg-primary rounded border-0 card__button"
           >
