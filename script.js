@@ -42,12 +42,10 @@ let allCars = [
 
 ////////////////////////////////////////////////////////////////////////
 //start functions
-
 function createAlert() {
   alert();
 }
 /////////////////////////
-
 function findCardById(carId) {
   for (let i = 0; i < allCars.length; i++) {
     if (allCars[i].id === carId) {
@@ -58,13 +56,13 @@ function findCardById(carId) {
 
 //////////////////////////////////
 function getDescription(foundCar) {
-  return `Car description :  
-          Marka: ${foundCar.marka},
-          Model: ${foundCar.model},
-          Color: ${foundCar.color}, 
-          Year: ${foundCar.year}, 
-          HorsePower: ${foundCar.horsePower}, 
-          Price: ${foundCar.price}$`;
+  return `Car description :     
+  Marka: ${foundCar.marka},
+  Model: ${foundCar.model},
+  Color: ${foundCar.color}, 
+  Year: ${foundCar.year}, 
+  HorsePower: ${foundCar.horsePower}, 
+  Price: ${foundCar.price}$`;
 }
 
 ///////////////////////////////
@@ -81,19 +79,24 @@ function findPriceLessThan(price) {
   for (let i = 0; i < allCars.length; i++) {
     if (price > allCars[i].price) cars.push(allCars[i]);
   }
+  enableAllBuyButtons();
+  disabledBuyButtonForCarsExpensiveThan(price);
   return cars;
 }
+
 ///////////////////////////////////
 function getDescriptions(cars) {
   let descriptions = "";
   for (let i = 0; i < cars.length; i++) {
-    descriptions += `Marka : ${cars[i].marka} , model : ${cars[i].model} , price : ${cars[i].price} \n`;
+    descriptions += ` 
+    Marka : ${cars[i].marka},
+    model : ${cars[i].model}, 
+    price : ${cars[i].price} \n `;
   }
   return descriptions;
 }
 
 /////////////////////////////////
-
 function showPopup() {
   let searchBar = document.getElementById("searchInput");
   let price = searchBar.value;
@@ -105,3 +108,28 @@ function showPopup() {
     alert("We dont have car, in this price");
   }
 }
+
+////////////////////////////////////
+function disabledBuyButtonForCarsExpensiveThan(price) {
+  let expensiveCars = [];
+
+  for (let i = 0; i < allCars.length; i++) {
+    console.log(allCars[i].price > price);
+    if (allCars[i].price > price) {
+      expensiveCars.push(allCars[i]);
+    }
+  }
+  console.log(expensiveCars);
+  for (let i = 0; i < expensiveCars.length; i++) {
+    document.getElementById(expensiveCars[i].id + "Button").disabled = true;
+  }
+}
+
+/////////////////////////////////////
+function enableAllBuyButtons() {
+  for (let i = 0; i < allCars.length; i++) {
+    document.getElementById(allCars[i].id + "Button").disabled = false;
+  }
+}
+
+////////////////////////////////////
