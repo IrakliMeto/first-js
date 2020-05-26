@@ -133,3 +133,22 @@ function enableAllBuyButtons() {
 }
 
 ////////////////////////////////////
+function calcAveragePrice(allCars) {
+  let sum = 0;
+
+  for (let i = 0; i < allCars.length; i++) {
+    sum += allCars[i].price;
+  }
+
+  let result = sum / allCars.length;
+  return result;
+}
+
+//////////////////////////////////////////
+//////////////////////////////////////////
+//////////////////////////////////////////
+function showTheAppropriateCar() {
+  alert(`Average Price is : ` + calcAveragePrice(allCars));
+}
+
+/////////////////////////////////////////
