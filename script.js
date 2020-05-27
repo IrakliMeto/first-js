@@ -124,9 +124,6 @@ function disabledBuyButtonForCarsExpensiveThan(price) {
 
   for (let i = 0; i < expensiveCars.length; i++) {
     document.getElementById(expensiveCars[i].id + "Button").disabled = true;
-    document
-      .getElementById(expensiveCars[i].id + "Button")
-      .classList.add("disabled--button");
   }
 }
 
@@ -189,9 +186,6 @@ function disabledBuyButtonsExceptCheapest() {
 
   for (let i = 0; i < expensiveCars.length; i++) {
     document.getElementById(expensiveCars[i].id + "Button").disabled = true;
-    document
-      .getElementById(expensiveCars[i].id + "Button")
-      .classList.add("disabled--button");
   }
 }
 //////////////////////////////////////////
@@ -210,9 +204,6 @@ function disabledBuyButtonsExceptTheExpensive() {
 
   for (let i = 0; i < cheapCars.length; i++) {
     document.getElementById(cheapCars[i].id + "Button").disabled = true;
-    document
-      .getElementById(cheapCars[i].id + "Button")
-      .classList.add("disabled--button");
   }
 }
 

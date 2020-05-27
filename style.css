@@ -81,6 +81,16 @@
   height: 32px;
 }
 
+.card__button[disabled] {
+  background-color: gray !important;
+  opacity: 0.8;
+}
+
+.card__button[disabled]:hover {
+  background-color: gray !important;
+  opacity: 0.8;
+}
+
 .card__button:focus {
   outline: none;
 }
@@ -93,11 +103,6 @@
 .search--button {
   width: 80px;
   height: 36px;
-}
-
-.disabled--button {
-  background-color: grey !important;
-  opacity: 0.8;
 }
 
 .search--button:focus {
