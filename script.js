@@ -114,12 +114,11 @@ function disabledBuyButtonForCarsExpensiveThan(price) {
   let expensiveCars = [];
 
   for (let i = 0; i < allCars.length; i++) {
-    console.log(allCars[i].price > price);
     if (allCars[i].price > price) {
       expensiveCars.push(allCars[i]);
     }
   }
-  console.log(expensiveCars);
+
   for (let i = 0; i < expensiveCars.length; i++) {
     document.getElementById(expensiveCars[i].id + "Button").disabled = true;
   }
@@ -146,34 +145,68 @@ function calcAveragePrice(allCars) {
 
 //////////////////////////////////////////
 
-function calcMinPriceCar(array) {
+function calcMinPrice(array) {
   let minPrice = array[0].price;
-  let minPriceCar = "";
+
   for (let i = 0; i < array.length; i++) {
     if (minPrice > array[i].price) {
       minPrice = array[i].price;
-      minPriceCar = array[i];
     }
   }
-  return minPriceCar;
+  return minPrice;
 }
 
-//////////////////////////////////////////
+/////////////////////////////////////////
 
-function calcMaxPriceCar(array) {
+function calcMaxPrice(array) {
   let maxPrice = 0;
-  let maxPriceCar = "";
   for (i = 0; i < array.length; i++) {
     if (maxPrice < array[i].price) {
       maxPrice = array[i].price;
-      maxPriceCar = array[i];
     }
   }
-  return maxPriceCar;
+  return maxPrice;
 }
 
 //////////////////////////////////////////
-function showTheAppropriateCar() {
+function disabledBuyButtonsExceptCheapest() {
+  enableAllBuyButtons();
+
+  let expensiveCars = [];
+  const minPrice = calcMinPrice(allCars);
+
+  for (let i = 0; i < allCars.length; i++) {
+    if (allCars[i].price > minPrice) {
+      expensiveCars.push(allCars[i]);
+    }
+  }
+
+  for (let i = 0; i < expensiveCars.length; i++) {
+    document.getElementById(expensiveCars[i].id + "Button").disabled = true;
+  }
+}
+//////////////////////////////////////////
+
+function disabledBuyButtonsExceptTheExpensive() {
+  enableAllBuyButtons();
+
+  let cheapCars = [];
+  let maxPrice = calcMaxPrice(allCars);
+
+  for (let i = 0; i < allCars.length; i++) {
+    if (allCars[i].price < maxPrice) {
+      cheapCars.push(allCars[i]);
+    }
+  }
+
+  for (let i = 0; i < cheapCars.length; i++) {
+    document.getElementById(cheapCars[i].id + "Button").disabled = true;
+  }
+}
+
+/////////////////////////////////////////
+function showAveragePrice() {
+  enableAllBuyButtons();
   alert(`Average Price is : ` + calcAveragePrice(allCars));
 }
 
