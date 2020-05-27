@@ -145,7 +145,33 @@ function calcAveragePrice(allCars) {
 }
 
 //////////////////////////////////////////
+
+function calcMinPriceCar(array) {
+  let minPrice = array[0].price;
+  let minPriceCar = "";
+  for (let i = 0; i < array.length; i++) {
+    if (minPrice > array[i].price) {
+      minPrice = array[i].price;
+      minPriceCar = array[i];
+    }
+  }
+  return minPriceCar;
+}
+
 //////////////////////////////////////////
+
+function calcMaxPriceCar(array) {
+  let maxPrice = 0;
+  let maxPriceCar = "";
+  for (i = 0; i < array.length; i++) {
+    if (maxPrice < array[i].price) {
+      maxPrice = array[i].price;
+      maxPriceCar = array[i];
+    }
+  }
+  return maxPriceCar;
+}
+
 //////////////////////////////////////////
 function showTheAppropriateCar() {
   alert(`Average Price is : ` + calcAveragePrice(allCars));
