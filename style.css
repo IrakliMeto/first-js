@@ -95,6 +95,11 @@
   height: 36px;
 }
 
+.disabled--button {
+  background-color: grey !important;
+  opacity: 0.8;
+}
+
 .search--button:focus {
   outline: none;
 }
