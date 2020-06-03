@@ -214,3 +214,7 @@ function showAveragePrice() {
 }
 
 /////////////////////////////////////////
+
+function navigateToLogin() {
+  window.location = "login.html";
+}

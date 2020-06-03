@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./imgs/samurai.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Buy Cars</title>
+  </head>
+  <body>
+    <form class="input-group d-flex flex-column align-items-center p-5">
+      <input
+        id="username"
+        type="text"
+        class="form-control w-25 my-2 border-0 border-primary input--line"
+        placeholder="Username"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+
+      <input
+        id="password"
+        type="password"
+        class="form-control w-25 my-2 border-0 border-primary input--line"
+        placeholder="Password"
+        aria-label="Password"
+        aria-describedby="addon-wrapping"
+      />
+
+      <!-- <input
+        type="text"
+        class="form-control w-25 my-2 border-0 border-primary input--line"
+        placeholder="Email"
+        aria-label="Email"
+        aria-describedby="addon-wrapping"
+      /> -->
+
+      <input
+        onclick="tryLogin()"
+        class="my-3 text-center"
+        type="butt"
+        value="LOGIN"
+      />
+    </form>
+
+    <script src="login.js"></script>
+  </body>
+</html>
