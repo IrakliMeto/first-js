@@ -32,10 +32,13 @@ function login(username, password) {
   let possibleUser = getFoundUser(username);
   if (!possibleUser) {
     console.log("მომხმარებელი ამ სახელით არ მოიძებნა");
+    alert("მომხმარებელი ამ უსერით არ მოიძებნა");
   } else {
     let isPasswordValid = checkPassword(possibleUser, password);
     if (isPasswordValid) {
       console.log("წარმატებით შეხვედით სისტემაში .");
+      alert("წარმატებით შეხვედით სისტემაში .");
+      window.location = "index.html";
       if (password.length < 8) {
         console.log(
           "მაგრამ თქვენ გაქვთ მარტივი პაროლი , გთხოვთ შეცვალოთ პაროლი"
@@ -43,6 +46,7 @@ function login(username, password) {
       }
     } else {
       console.log("პაროლი არასწორია");
+      alert("პაროლი არასწორია");
     }
   }
 }
