@@ -25,21 +25,21 @@
 
         <div class="buttons d-flex justify-content-center w-100">
           <button
-            onclick="disabledBuyButtonsExceptCheapest()"
+            id="button-cheapest"
             class="search--button rounded border-0 bg-primary text-light ml-3"
           >
             Cheap
           </button>
 
           <button
-            onclick="showAveragePrice()"
+            id="button-average"
             class="search--button rounded border-0 bg-primary text-light ml-3"
           >
             Average
           </button>
 
           <button
-            onclick="disabledBuyButtonsExceptTheExpensive()"
+            id="button-expensive"
             class="search--button rounded border-0 bg-primary text-light ml-3"
           >
             Expensive
@@ -58,7 +58,7 @@
         />
 
         <button
-          onclick="showPopup()"
+          id="search-button"
           class="search--button rounded border-0 bg-primary text-light ml-3"
         >
           Search
@@ -67,11 +67,7 @@
 
       <div class="row">
         <div class="col-3 card border-0">
-          <div
-            id="item1"
-            onclick="displayDescription('item1')"
-            class="card__image-holder w-100 h-75"
-          >
+          <div id="item1" class="card__image-holder w-100 h-75">
             <img
               src="./imgs/mustang1969.jpg"
               alt="Ford Mustang 1969"
@@ -88,11 +84,7 @@
         </div>
 
         <div class="col-3 card border-0">
-          <div
-            id="item2"
-            onclick="displayDescription('item2')"
-            class="card__image-holder w-100 h-75"
-          >
+          <div id="item2" class="card__image-holder w-100 h-75">
             <img
               src="./imgs/highlander.jpg"
               alt="Toyota Highlander"
@@ -109,11 +101,7 @@
         </div>
 
         <div class="col-3 card border-0">
-          <div
-            id="item3"
-            onclick="displayDescription('item3')"
-            class="card__image-holder w-100 h-75"
-          >
+          <div id="item3" class="card__image-holder w-100 h-75">
             <img
               src="./imgs/cls350.jpg"
               alt="Mercedes-Benz CLS 350"
@@ -130,11 +118,7 @@
         </div>
 
         <div class="col-3 card border-0">
-          <div
-            id="item4"
-            onclick="displayDescription('item4')"
-            class="card__image-holder w-100 h-75"
-          >
+          <div id="item4" class="card__image-holder w-100 h-75">
             <img
               src="./imgs/cooper.jpg"
               alt="Mini Cooper"
@@ -153,7 +137,7 @@
 
       <div class="row d-flex justify-content-center my-5">
         <button
-          onclick="navigateToLogin()"
+          id="navigate-button"
           class="btn w-25 text-light bg-primary rounded border-0"
         >
           Login
@@ -161,6 +145,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./dist/script.bundle.js"></script>
   </body>
 </html>
