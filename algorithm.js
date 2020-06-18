@@ -1,5 +1,5 @@
 function evclide(a, b) {
-  var x;
+  let x;
   while (a % b !== 0) {
     x = a % b;
     a = b;
@@ -8,3 +8,25 @@ function evclide(a, b) {
   return b;
 }
 console.log(evclide(67, 55));
+
+///////////////////////
+
+function convertCToF(celsius) {
+  let farenheit = (celsius * 9) / 5 + 32;
+
+  return farenheit;
+}
+
+console.log(convertCToF(55));
+
+///////////////////////
+
+function convertFToC(farenheit) {
+  let celsius = ((farenheit - 32) * 5) / 9;
+
+  return celsius;
+}
+
+console.log(convertFToC(55));
+
+//////////////////////////
